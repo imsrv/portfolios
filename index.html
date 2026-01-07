@@ -564,10 +564,12 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Chartered Accountant Services. All rights reserved.</p>
+        <p>&copy; <span id="year"></span> Chartered Accountant Services. All rights reserved.</p>
     </footer>
 
     <script>
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
